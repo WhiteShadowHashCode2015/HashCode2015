@@ -15,8 +15,8 @@ public class HashCode2015 {
 		
 		
 		try {
-			//GlobalData gd = InputReader.readFile("dc.in");
-			GlobalData gd = InputReader.readFile("testInput.in");
+			GlobalData gd = InputReader.readFile("dc.in");
+			//GlobalData gd = InputReader.readFile("testInput.in");
 			
 			
 			System.out.println("nbRows: " + gd.nbRows);
@@ -30,9 +30,14 @@ public class HashCode2015 {
 
 		    CalculateFreeBlocks.calculateFreeBlocks(gd.listRows);
 
-		    
 		    // Do your work hear
-			
+		    List<Server> servers=gd.listServers;
+		    gd.listServers=listServ;
+		    
+		    new FillMyDataCenter().execute(gd);
+		    
+		    gd.listServers=servers;
+		    
 			OutputWriter.writeFile("result.out", gd);
 			System.out.println("Fini");
 			

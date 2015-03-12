@@ -6,7 +6,7 @@ public class Server {
 	public int size;
 	public int row;
 	public int slot;
-	public boolean used;
+	public boolean used = false;
 	public int group;
 	
 	public Server(int size, int capacity){
