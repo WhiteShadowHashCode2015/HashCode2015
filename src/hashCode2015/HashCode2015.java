@@ -28,6 +28,8 @@ public class HashCode2015 {
 		    List<Server>listServ = new ArrayList<>(gd.listServers);		    
 		    ListSorters.sortServerByQualityDesc(listServ);
 
+		    CalculateFreeBlocks.calculateFreeBlocks(gd.listRows);
+
 		    
 		    // Do your work hear
 			

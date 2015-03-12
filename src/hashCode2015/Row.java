@@ -6,6 +6,7 @@ import java.util.List;
 public class Row {
 	int size;
 	public List<Integer> slotsUnavaible;
+	public List<FreeBlock> listFreeBlock;
 	
 	
 	public Row(int size) {
