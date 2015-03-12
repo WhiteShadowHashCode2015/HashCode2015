@@ -8,11 +8,21 @@ import java.util.List;
 
 public class OutputWriter {
 
-	public static void writeFile(String filename, List<String> listLign) throws FileNotFoundException{
+	public static void writeFile(String filename, GlobalData gd) throws FileNotFoundException{
 		PrintWriter pw = new PrintWriter (new File(filename));
 		
-		for(String lign: listLign){
-			pw.println(lign);
+		for(Server server: gd.listServers){
+			if(server.used){
+				pw.print(server.row);
+				pw.print(' ');
+				pw.print(server.slot);
+				pw.print(' ');
+				pw.print(server.group);
+				pw.println();
+			}
+			else{
+				pw.println('x');
+			}
 		}
 		pw.close();
 	}

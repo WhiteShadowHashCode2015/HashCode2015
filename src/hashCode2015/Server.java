@@ -12,6 +12,9 @@ public class Server {
 	public Server(int size, int capacity){
 		this.size = size;
 		this.capacity = capacity;
+		this.used = false;
+		this.row = 0;
+		this.group = 0;
 	}
 	
 }

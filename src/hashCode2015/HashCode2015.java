@@ -24,7 +24,7 @@ public class HashCode2015 {
 		    
 		    // Do your work hear
 			
-			//OutputWriter.writeFile("output.txt", listLign);
+			OutputWriter.writeFile("result.out", gd);
 			System.out.println("Fini");
 			
 		} catch (Exception e) {
