@@ -22,6 +22,13 @@ public class HashCode2015 {
 		    System.out.println("nbGroup: " + gd.nbGroup);
 		    System.out.println("nbServer: " + gd.nbServer);
 		    
+		    for(int i=0; i<gd.listRows.size(); i++){
+		    	for(int j=0; j<gd.listRows.get(i).slotsUnavaible.size(); j++){
+			    	System.out.print(gd.listRows.get(i).slotsUnavaible.get(j));
+			    	System.out.print(' ');
+			    }
+		    	System.out.println();
+		    }
 		    // Do your work hear
 			
 			OutputWriter.writeFile("result.out", gd);

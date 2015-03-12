@@ -3,6 +3,7 @@ package hashCode2015;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,6 +34,11 @@ public class InputReader {
 			    int slotIdx = scanner.nextInt();
 			    
 			    gd.listRows.get(rowIdx).slotsUnavaible.add(slotIdx);
+		    }
+		    
+		    //Sort unavaible slot in each rows
+		    for(int i = 0; i<gd.nbRows; i++){
+		    	Collections.sort(gd.listRows.get(i).slotsUnavaible);
 		    }
 		    
 		    //Read list servers
