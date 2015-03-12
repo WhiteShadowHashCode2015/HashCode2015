@@ -1,5 +1,8 @@
 package hashCode2015;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class HashCode2015 {
@@ -22,13 +25,10 @@ public class HashCode2015 {
 		    System.out.println("nbGroup: " + gd.nbGroup);
 		    System.out.println("nbServer: " + gd.nbServer);
 		    
-		    for(int i=0; i<gd.listRows.size(); i++){
-		    	for(int j=0; j<gd.listRows.get(i).slotsUnavaible.size(); j++){
-			    	System.out.print(gd.listRows.get(i).slotsUnavaible.get(j));
-			    	System.out.print(' ');
-			    }
-		    	System.out.println();
-		    }
+		    List<Server>listServ = new ArrayList<>(gd.listServers);		    
+		    ListSorters.sortServerByQualityDesc(listServ);
+
+		    
 		    // Do your work hear
 			
 			OutputWriter.writeFile("result.out", gd);
