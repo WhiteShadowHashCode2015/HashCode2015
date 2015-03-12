@@ -6,6 +6,8 @@ public class Server {
 	public int size;
 	public int row;
 	public int slot;
+	public boolean used;
+	public int group;
 	
 	public Server(int size, int capacity){
 		this.size = size;

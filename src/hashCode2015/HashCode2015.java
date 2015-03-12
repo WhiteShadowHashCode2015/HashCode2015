@@ -21,6 +21,8 @@ public class HashCode2015 {
 		    System.out.println("nbUnavaible: " + gd.nbUnavaible);
 		    System.out.println("nbGroup: " + gd.nbGroup);
 		    System.out.println("nbServer: " + gd.nbServer);
+		    
+		    // Do your work hear
 			
 			//OutputWriter.writeFile("output.txt", listLign);
 			System.out.println("Fini");
